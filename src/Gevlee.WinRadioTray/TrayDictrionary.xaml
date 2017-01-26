@@ -1,5 +1,26 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 					xmlns:tb="http://www.hardcodet.net/taskbar">
-	<tb:TaskbarIcon x:Key="MainSystemTrayIcon" IconSource="pack://application:,,,/Gevlee.WinRadioTray;component/Resources/main_icon.ico"/>
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary>
+			<ContextMenu x:Key="TrayContextMenu" ItemsSource="{Binding TrayContextMenuItems}">
+				<ContextMenu.ItemContainerStyle>
+					<Style TargetType="MenuItem">
+						<Setter Property="Command" Value="{Binding ClickCommand}"/>
+						<Setter Property="Header" Value="{Binding Name}"/>
+					</Style>
+				</ContextMenu.ItemContainerStyle>
+				<!--<ContextMenu.ItemTemplate>
+					<DataTemplate DataType="MenuItem">
+						<MenuItem Header="{Binding Name}" Command="{Binding ClickCommand}"></MenuItem>
+					</DataTemplate>
+				</ContextMenu.ItemTemplate>-->
+			</ContextMenu>
+		</ResourceDictionary>
+	</ResourceDictionary.MergedDictionaries>
+
+	<tb:TaskbarIcon x:Key="TrayIcon" x:Name="TrayIcon" IconSource="{Binding IconSource}"
+					LeftClickCommand="{Binding ContextMenuCommand}"
+					ContextMenu="{StaticResource TrayContextMenu}">
+	</tb:TaskbarIcon>
 </ResourceDictionary>
