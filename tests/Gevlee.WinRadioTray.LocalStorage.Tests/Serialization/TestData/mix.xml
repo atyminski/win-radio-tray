@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SavedRadiostations>
+  <Radiostations>
+    <Radiostation Name="TEST">
+      <Url>http://test/test</Url>
+    </Radiostation>
+  </Radiostations>
+  <RadiostationsGroups>
+    <RadiostationsGroup Name="TEST_GROUP">
+      <Radiostation Name="TEST1">
+        <Url>http://test/test</Url>
+      </Radiostation>
+      <Radiostation Name="TEST2">
+        <Url>http://test/test</Url>
+      </Radiostation>
+    </RadiostationsGroup>
+    <RadiostationsGroup Name="TEST_GROUP_2">
+      <Radiostation Name="TEST3">
+        <Url>http://test/test</Url>
+      </Radiostation>
+    </RadiostationsGroup>
+  </RadiostationsGroups>
+</SavedRadiostations>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SavedRadiostations>
+  <Radiostations>
+    <Radiostation Name="TEST">
+      <Url>http://test/test</Url>
+    </Radiostation>
+  </Radiostations>
+</SavedRadiostations>

@@ -1,9 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Windows;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.CommandWpf;
-using Gevlee.WinRadioTray.Core;
 using Gevlee.WinRadioTray.Core.ViewModel;
 
 namespace Gevlee.WinRadioTray.ViewModel
@@ -11,10 +8,11 @@ namespace Gevlee.WinRadioTray.ViewModel
 	public class TrayIconViewModel :  ViewModelBase, ITrayIconViewModel
 	{
 		private string iconSource;
+		private ITrayIconContextMenuViewModel contextMenuViewModel;
 
-		public TrayIconViewModel(IEnumerable<ITrayContextMenuItem> trayContextMenuItems)
+		public TrayIconViewModel(ITrayIconContextMenuViewModel contextMenuViewModel)
 		{
-			TrayContextMenuItems = trayContextMenuItems;
+			ContextMenuViewModel = contextMenuViewModel;
 			ContextMenuCommand = new RelayCommand(() =>
 			{
 				
@@ -32,7 +30,16 @@ namespace Gevlee.WinRadioTray.ViewModel
 			}
 		}
 
+		public ITrayIconContextMenuViewModel ContextMenuViewModel
+		{
+			get { return contextMenuViewModel; }
+			private set
+			{
+				contextMenuViewModel = value;
+				RaisePropertyChanged();
+			}
+		}
+
 		public ICommand ContextMenuCommand { get; }
-		public IEnumerable<ITrayContextMenuItem> TrayContextMenuItems { get; }
 	}
 }

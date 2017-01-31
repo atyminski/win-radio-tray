@@ -34,6 +34,16 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Portable|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Portable\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;PORTABLE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Autofac, Version=4.3.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Autofac.4.3.0\lib\net45\Autofac.dll</HintPath>
@@ -92,8 +102,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="BindingProxy.cs" />
     <Compile Include="MenuItems\ExitTrayContextMenuItem.cs" />
     <Compile Include="MenuItems\FavouritesTrayContextMenuItem.cs" />
+    <Compile Include="StyleSelectors\TrayMenuItemsStyleSelector.cs" />
+    <Compile Include="ViewModel\TrayIconContextMenuViewModel.cs" />
     <Compile Include="ViewModel\TrayIconViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -144,6 +157,14 @@
     <ProjectReference Include="..\Gevlee.WinRadioTray.Core\Gevlee.WinRadioTray.Core.csproj">
       <Project>{b3112fc7-33f2-41b7-9020-3359d6f97de4}</Project>
       <Name>Gevlee.WinRadioTray.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gevlee.WinRadioTray.LocalStorage.Contract\Gevlee.WinRadioTray.LocalStorage.Contract.csproj">
+      <Project>{483d6268-a875-4f93-a74e-133a57cc64f3}</Project>
+      <Name>Gevlee.WinRadioTray.LocalStorage.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gevlee.WinRadioTray.LocalStorage\Gevlee.WinRadioTray.LocalStorage.csproj">
+      <Project>{8dfc760c-ec2b-4e1a-a94c-ba50c7d3d727}</Project>
+      <Name>Gevlee.WinRadioTray.LocalStorage</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

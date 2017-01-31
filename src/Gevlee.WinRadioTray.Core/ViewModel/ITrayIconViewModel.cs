@@ -5,6 +5,7 @@ namespace Gevlee.WinRadioTray.Core.ViewModel
 	public interface ITrayIconViewModel
 	{
 		string IconSource { get; }
+		ITrayIconContextMenuViewModel ContextMenuViewModel { get; }
 		ICommand ContextMenuCommand { get; }
 	}
 }
