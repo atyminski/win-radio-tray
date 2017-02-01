@@ -108,6 +108,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="BindingProxy.cs" />
+    <Compile Include="LoggingModule.cs" />
     <Compile Include="MenuItems\ExitTrayContextMenuItem.cs" />
     <Compile Include="MenuItems\FavouritesTrayContextMenuItem.cs" />
     <Compile Include="StyleSelectors\TrayMenuItemsStyleSelector.cs" />
@@ -148,7 +149,9 @@
     <Folder Include="View\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\main_icon.ico" />
+    <Resource Include="Resources\main_icon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <Page Include="TrayDictrionary.xaml">

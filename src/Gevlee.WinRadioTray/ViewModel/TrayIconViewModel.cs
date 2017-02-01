@@ -17,7 +17,7 @@ namespace Gevlee.WinRadioTray.ViewModel
 			{
 				
 			});
-			IconSource = "pack://application:,,,/Gevlee.WinRadioTray;component/Resources/main_icon.ico";
+			IconSource = "pack://application:,,,/WinRadioTray;component/Resources/main_icon.ico";
 		}
 
 		public string IconSource

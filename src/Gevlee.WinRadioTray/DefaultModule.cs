@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using Autofac;
+using Common.Logging;
 using Gevlee.WinRadioTray.Core;
 using Gevlee.WinRadioTray.Core.ViewModel;
 using Gevlee.WinRadioTray.LocalStorage;
@@ -18,6 +19,7 @@ namespace Gevlee.WinRadioTray
 #else
 			var dataDir = Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "WinTrayRadio")).FullName;
 #endif
+			builder.RegisterModule(new LoggingModule<ILog>(LogManager.GetLogger));
 			builder.RegisterModule(new LocalStorageModule(dataDir));
 			builder.RegisterModule<CoreModule>();
 
