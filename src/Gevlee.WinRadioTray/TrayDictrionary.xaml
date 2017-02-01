@@ -7,6 +7,7 @@
 	<Style TargetType="MenuItem" x:Key="DefaultMenuItemStyle">
 		<Setter Property="Command" Value="{Binding ClickCommand}"/>
 		<Setter Property="Header" Value="{Binding Name}"/>
+		<Setter Property="ItemsSource" Value="{Binding ChildContextMenuItems}" />
 	</Style>
 	<Style TargetType="Separator" x:Key="SeparatorStyle">
 	</Style>

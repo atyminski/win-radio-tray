@@ -19,6 +19,8 @@ namespace Gevlee.WinRadioTray
 			var dataDir = Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "WinTrayRadio")).FullName;
 #endif
 			builder.RegisterModule(new LocalStorageModule(dataDir));
+			builder.RegisterModule<CoreModule>();
+
 			builder.RegisterType<TrayIconViewModel>().As<ITrayIconViewModel>().SingleInstance();
 			builder.RegisterType<TrayIconContextMenuViewModel>().As<ITrayIconContextMenuViewModel>();
 

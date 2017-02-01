@@ -39,6 +39,10 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.3.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Autofac.4.3.0\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,12 +53,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoreModule.cs" />
+    <Compile Include="DefaultTrayContextMenuItem.cs" />
+    <Compile Include="IRadiostationSelectedCommand.cs" />
     <Compile Include="ITrayContextMenuItem.cs" />
+    <Compile Include="ITrayContextMenuItemFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RadiostationSelectedCommand.cs" />
+    <Compile Include="RadiostationsGroupTrayContextMenuItemFactory.cs" />
+    <Compile Include="RadiostationTrayContextMenuItemFactory.cs" />
     <Compile Include="ViewModel\ITrayIconContextMenuViewModel.cs" />
     <Compile Include="ViewModel\ITrayIconViewModel.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Gevlee.WinRadioTray.LocalStorage.Contract\Gevlee.WinRadioTray.LocalStorage.Contract.csproj">
+      <Project>{483D6268-A875-4F93-A74E-133A57CC64F3}</Project>
+      <Name>Gevlee.WinRadioTray.LocalStorage.Contract</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
