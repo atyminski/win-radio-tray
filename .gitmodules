@@ -1,4 +1,0 @@
-[submodule "dependencies/GevbenTeam.ResxSupport"]
-	path = dependencies/GevbenTeam.ResxSupport
-	url = git@github.com:gevben-team/ResXSupport.git
-	branch = develop
