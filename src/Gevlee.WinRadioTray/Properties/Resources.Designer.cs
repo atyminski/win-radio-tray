@@ -59,5 +59,23 @@ namespace Gevlee.WinRadioTray.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exit.
+        /// </summary>
+        internal static string Gevlee_WinRadioTray_MenuItems_ExitTrayContextMenuItem_Name {
+            get {
+                return ResourceManager.GetString("Gevlee_WinRadioTray_MenuItems_ExitTrayContextMenuItem_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Favourites.
+        /// </summary>
+        internal static string Gevlee_WinRadioTray_MenuItems_FavouritesTrayContextMenuItem_Name {
+            get {
+                return ResourceManager.GetString("Gevlee_WinRadioTray_MenuItems_FavouritesTrayContextMenuItem_Name", resourceCulture);
+            }
+        }
     }
 }

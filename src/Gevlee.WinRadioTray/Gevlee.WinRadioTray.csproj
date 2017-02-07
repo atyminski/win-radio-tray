@@ -115,6 +115,11 @@
     <Compile Include="LoggingModule.cs" />
     <Compile Include="MenuItems\ExitTrayContextMenuItem.cs" />
     <Compile Include="MenuItems\FavouritesTrayContextMenuItem.cs" />
+    <Compile Include="Properties\Resources.pl-PL.Designer.cs">
+      <DependentUpon>Resources.pl-PL.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="StyleSelectors\TrayMenuItemsStyleSelector.cs" />
     <Compile Include="ViewModel\TrayIconContextMenuViewModel.cs" />
     <Compile Include="ViewModel\TrayIconViewModel.cs" />
@@ -135,6 +140,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Properties\Resources.pl-PL.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.pl-PL.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
