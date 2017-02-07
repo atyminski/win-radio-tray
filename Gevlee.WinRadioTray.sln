@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GevbenTeam.ResxSupport.Auto
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gevlee.WinRadioTray.Player.Core", "src\Gevlee.WinRadioTray.Player.Core\Gevlee.WinRadioTray.Player.Core.csproj", "{53EA6C3E-BF29-4C5A-81FC-5A1FF916E23A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gevlee.WinRadioTray.Player", "src\Gevlee.WinRadioTray.Player\Gevlee.WinRadioTray.Player.csproj", "{F5007E8F-BDBB-47F1-BB8E-61AA2DE42B1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -74,6 +76,12 @@ Global
 		{53EA6C3E-BF29-4C5A-81FC-5A1FF916E23A}.Portable|Any CPU.Build.0 = Release|Any CPU
 		{53EA6C3E-BF29-4C5A-81FC-5A1FF916E23A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53EA6C3E-BF29-4C5A-81FC-5A1FF916E23A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5007E8F-BDBB-47F1-BB8E-61AA2DE42B1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5007E8F-BDBB-47F1-BB8E-61AA2DE42B1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5007E8F-BDBB-47F1-BB8E-61AA2DE42B1F}.Portable|Any CPU.ActiveCfg = Release|Any CPU
+		{F5007E8F-BDBB-47F1-BB8E-61AA2DE42B1F}.Portable|Any CPU.Build.0 = Release|Any CPU
+		{F5007E8F-BDBB-47F1-BB8E-61AA2DE42B1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5007E8F-BDBB-47F1-BB8E-61AA2DE42B1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
