@@ -2,6 +2,6 @@
 {
 	public interface IPlayerService
 	{
-		
+		void SwitchRadiostation(string url);
 	}
 }
