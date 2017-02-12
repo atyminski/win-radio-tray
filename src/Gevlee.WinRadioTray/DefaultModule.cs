@@ -7,6 +7,7 @@ using Gevlee.WinRadioTray.Core;
 using Gevlee.WinRadioTray.Core.ViewModel;
 using Gevlee.WinRadioTray.LocalStorage;
 using Gevlee.WinRadioTray.MenuItems;
+using Gevlee.WinRadioTray.Player;
 using Gevlee.WinRadioTray.Properties;
 using Gevlee.WinRadioTray.ViewModel;
 
@@ -25,6 +26,7 @@ namespace Gevlee.WinRadioTray
 			builder.RegisterModule(new LoggingModule<ILog>(LogManager.GetLogger));
 			builder.RegisterModule(new LocalStorageModule(dataDir));
 			builder.RegisterModule<CoreModule>();
+			builder.RegisterModule<PlayerModule>();
 
 			builder.RegisterType<TrayIconViewModel>().As<ITrayIconViewModel>().SingleInstance();
 			builder.RegisterType<TrayIconContextMenuViewModel>().As<ITrayIconContextMenuViewModel>();

@@ -195,6 +195,14 @@
       <Project>{8dfc760c-ec2b-4e1a-a94c-ba50c7d3d727}</Project>
       <Name>Gevlee.WinRadioTray.LocalStorage</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Gevlee.WinRadioTray.Player.Core\Gevlee.WinRadioTray.Player.Core.csproj">
+      <Project>{53ea6c3e-bf29-4c5a-81fc-5a1ff916e23a}</Project>
+      <Name>Gevlee.WinRadioTray.Player.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gevlee.WinRadioTray.Player\Gevlee.WinRadioTray.Player.csproj">
+      <Project>{f5007e8f-bdbb-47f1-bb8e-61aa2de42b1f}</Project>
+      <Name>Gevlee.WinRadioTray.Player</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="FodyWeavers.xml" />

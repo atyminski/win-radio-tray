@@ -1,12 +1,16 @@
 ﻿using System;
 using Gevlee.WinRadioTray.LocalStorage.Contract;
+using Gevlee.WinRadioTray.Player.Core;
 
 namespace Gevlee.WinRadioTray.Core
 {
 	public class RadiostationSelectedCommand : IRadiostationSelectedCommand
 	{
-		public RadiostationSelectedCommand(Radiostation radiostation, ITrayContextMenuItem menuItem)
+		private readonly IPlayerService playerService;
+
+		public RadiostationSelectedCommand(Radiostation radiostation, ITrayContextMenuItem menuItem, IPlayerService playerService)
 		{
+			this.playerService = playerService;
 			Radiostation = radiostation;
 			MenuItem = menuItem;
 		}
@@ -18,7 +22,7 @@ namespace Gevlee.WinRadioTray.Core
 
 		public void Execute(object parameter)
 		{
-			//TODO
+			playerService.SwitchRadiostation(Radiostation.Url);
 		}
 
 		public event EventHandler CanExecuteChanged;
